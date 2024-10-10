@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Livros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Busca de Livros</h1>
+        <form method="POST">
+            <input type="text" name="termo_busca" placeholder="Digite o termo de busca" required>
+            <button type="submit">Buscar</button>
+        </form>
+
+        <div class="resultados">
+            {% if resultados %}
+                <h2>Resultados:</h2>
+                <ul>
+                    {% for livro in resultados %}
+                        <li>
+                            <strong>Título:</strong> {{ livro.titulo }}<br>
+                            <strong>Autor:</strong> {{ livro.autor }}<br>
+                            <strong>Tipo:</strong> {{ livro.tipo }}<br>
+                            <strong>Código:</strong> {{ livro.codigo }}<br>
+                            <strong>Localização:</strong> {{ livro.localizacao }}<br>
+                        </li>
+                        <hr>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Nenhum livro encontrado.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
