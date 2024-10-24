@@ -3,48 +3,65 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
-}
-
-.container {
+  }
+  
+  .container {
     max-width: 800px;
     margin: 0 auto;
     background: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
+  }
+  
+  h1 {
     text-align: center;
-}
-
-form {
+  }
+  
+  form {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-}
-
-input[type="text"] {
+  }
+  
+  input[type="text"] {
     padding: 10px;
     width: 70%;
     margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-button {
+    flex: 1;
+  }
+  
+  button {
     padding: 10px 15px;
     border: none;
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white;
     border-radius: 4px;
     cursor: pointer;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #0056b3;
-}
-
-.resultados {
+  }
+  
+  .resultados {
     margin-top: 20px;
-}
+  }
+  .resultados ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 20px;
+  }
+  
+  .resultados li {
+    width: 35%;
+    margin-bottom: 20px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+  }
